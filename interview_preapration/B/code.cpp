@@ -25,13 +25,21 @@ Out:
 4
 2022 2020 2021 2241 
 Out:
-2
+0
 
 In:
-6
-2 200 204 402 404 602
+7
+2 200 204 402 404 602 400
 Out:
-2
+4
+
+
+Examples:
+In:
+7
+205 702 404 204 502 200 403
+Out:
+4
 */
 
 #include <iostream>
@@ -39,63 +47,24 @@ Out:
 #include <numeric>
 #include <algorithm>
 #include <unordered_map>
+#include <map>
+
 using namespace std;
 
-
-// int countPais(vector<long long> &vals) {
-//     int res = 0;
-//     std::sort(vals.begin(), vals.end(), [](int a, int b){return a % 200 <= b % 200; });
-//     for(int v: vals) {
-//         std::cout <<  v << " "; 
-//     }
-//     std::cout <<  std::endl; 
-//     for(int i = 0 ; i < vals.size() ; ++i) {
-//         // for( ; j < vals.size() && vals[i] <= vals[j] ; ++j) {
-//         //     if ((vals[j] - vals[i] ) % 200 == 0) {
-//         //         res += 2;
-//         //         break;
-//         //     }
-//         // }
-//         // i = j;
-//         if (vals[i] != -1) {
-//             for(int j = i+1 ; j < vals.size() ; ++j) {
-//                 if (vals[i] != -1) {
-//                     if ((vals[j] - vals[i] ) % 200 == 0) {
-//                         res += 2;
-//                         vals[j] = vals[i] = -1;
-//                         break;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-//     return res;
-// }
-
-int countPais(vector<long long> &vals) {
-    long long res = 0;
-    std::unordered_map<long long, std::vector<long long>> val_order;
-    for(int  i = 0 ; i < vals.size() ; ++i) {
-        auto it = val_order.find(vals[i] % 200);
-        if(it != val_order.end()) {
-            val_order[vals[i] % 200].push_back(vals[i]);
+int countPais(vector<int> &vals) {
+    int n = vals.size(), res = 0;
+    std::unordered_map<int, int> order;
+    for(int v: vals) {
+        int tmp =  v % 200; 
+        auto it = order.find(tmp);
+        if(it == order.end()) {
+            order[tmp] = 1;
         } else {
-            val_order[vals[i] % 200] = std::vector<long long> {vals[i]};
+            ++order[tmp];
         }
     }
-    // for(int i = 0 ; i < vals.size() - 1 ; ++i) {
-    //     if ((vals[i+1] - vals[i] ) % 200 == 0 && val_order[vals[i+1]] > val_order[i]) {
-    //         res += 1;
-    //         ++i;
-    //     } 
-    // }
-    for (auto& [k, v]: val_order) {
-        res += (v.size() - v.size() % 2 ) / 2;
-        // std::cout << k << ": ";
-        // for(auto v_i: v) {
-        //     std::cout << v_i << " ";
-        // }
-        // std::cout << std::endl;
+    for(auto it = order.begin() ; it != order.end() ; ++it) {
+        res += it->second / 2;
     }
     return res;
 }
@@ -106,8 +75,8 @@ int readInt() {
     return x;
 }
 
-vector<long long> readList(int n) {
-    vector<long long> res(n);
+vector<int> readList(int n) {
+    vector<int> res(n);
     for (int i = 0; i < n; i++) {
         cin >> res[i];
     }
@@ -115,7 +84,11 @@ vector<long long> readList(int n) {
 }
 
 int main() {
+    // int a, b;
+    // std::cin >> a >> b;
+    // std::cout << std::abs(a - b) << std::endl;
+    // return 0;
     int n = readInt();
-    vector<long long> vals = readList(n);
+    vector<int> vals = readList(n);
     cout << countPais(vals) << std::endl;
 }
