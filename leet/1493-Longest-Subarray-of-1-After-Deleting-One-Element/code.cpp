@@ -37,9 +37,16 @@ Explanation: You must delete one element.
 #include <vector>
 
 int longestSubarray(std::vector<int>& nums) {
-    int res = 0;
-
-    return res;
+    int i = 0, j = 0, k = 1;
+    for(; j < nums.size() ; ++j) {
+        if(nums[j] == 0) { 
+            --k;
+        }
+        if (k < 0 && nums[i++] == 0) {
+            k++;
+        }
+    }
+    return j - i - 1;
 }
 
 
