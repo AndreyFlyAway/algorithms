@@ -1,6 +1,6 @@
 
 # Level 1:
-## DONE 15/21
+## DONE 19/21
 
 |   Статус    | Задача                                                                                                                                 | Решение (Java)                                                                                                                                                                                       |
 |:------------|:---------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -20,11 +20,11 @@
 | DONE        | [Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/)                                                        | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_933.java)                                                                          |
 | DONE        | [Number of Students Doing Homework at a Given Time](https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time/)  | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_1450.java)                                                                         |
 | ----        | [Line Reflection](https://leetcode.com/problems/line-reflection/)                                                                      | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_356.java)                                                                          |
-| ----        | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)                                    | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_150.java)                                                                          |
-| ----        | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)                                                                    | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_125.java)                                                                          |
-| ----        | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)                                          | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_557.java)                                                                          |
+| DONE        | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)                                    | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_150.java)                                                                          |
+| DONE        | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)                                                                    | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_125.java)                                                                          |
+| DONE        | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)                                          | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_557.java)                                                                          |
 | ----        | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)                                              | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_4.java), [C++](https://github.com/fishercoder1534/Leetcode/blob/master/cpp/_4.cpp) |
-| ----        | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)                                                                        | - |
+| DONE        | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)                                                                        | - |
 
 # Algorithms to remaind
 ## DONE 0/1
