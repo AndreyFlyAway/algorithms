@@ -16,8 +16,7 @@ a reflected point in the opposite side.
 
 
 2 2
-1 1
--1 1
+2 -1
 
 2 2
 1 1
@@ -64,11 +63,10 @@ int isReflected(std::vector<std::vector<int>>& vals) {
 } 
 
 int main() {
-    int n, m;
-    std::cin >> n >> m;
-    std::vector<std::vector<int>> values(n, std::vector<int>(m, 0));
+    int n = 2;
+    std::vector<std::vector<int>> values(n, std::vector<int>(n, 0));
     for(int i = 0 ; i < n ; ++i) {
-        for(int j = 0 ; j < n ; ++j) {
+        for(int j = 0 ; j < n; ++j) {
             std::cin >> values[i][j];
         }
     }
