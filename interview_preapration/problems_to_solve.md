@@ -1,6 +1,6 @@
 
 # Level 1:
-## DONE 21/21
+## DONE 22/23
 
 |   Статус    | Задача                                                                                                                                 | Решение (Java)                                                                                                                                                                                       |
 |:------------|:---------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -25,6 +25,8 @@
 | DONE        | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)                                          | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_557.java)                                                                          |
 | DONE        | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)                                              | [Solution](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_4.java), [C++](https://github.com/fishercoder1534/Leetcode/blob/master/cpp/_4.cpp) |
 | DONE        | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)                                                                        | - |
+| DONE        | [Maximum Size Subarray Sum Equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k)                                 | - |
+| DONE        | [Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance)                                 | - |
 | ----        | [Rotate image](https://leetcode.com/problems/rotate-image/)                                                                            | - |
 
 # Algorithms to remaind
