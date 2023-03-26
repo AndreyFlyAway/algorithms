@@ -9,7 +9,7 @@ int compress(std::vector<char>& data) {
         return 1;
     }
     int j = 0, i = 0;
-    for(; i < n ; i++) {
+    for(; i < n ; ++i) {
         int count = 1;
         for(; i < (n - 1) && data[i] == data[i+1];  ++count, ++i) {}
         data[j++] = data[i];

@@ -31,7 +31,7 @@ In:
 7
 2 200 204 402 404 602 400
 Out:
-4
+3
 
 
 Examples:
@@ -39,7 +39,10 @@ In:
 7
 205 702 404 204 502 200 403
 Out:
+2
+
 4
+1197 1397 300 301
 */
 
 #include <iostream>
@@ -53,18 +56,20 @@ using namespace std;
 
 int countPais(vector<int> &vals) {
     int n = vals.size(), res = 0;
-    std::unordered_map<int, int> order;
-    for(int v: vals) {
-        int tmp =  v % 200; 
-        auto it = order.find(tmp);
-        if(it == order.end()) {
-            order[tmp] = 1;
+    std::vector<int> diffs(200, -1);
+    for(int i = 0 ; i < vals.size() ; ++i) {
+        int tmp = vals[i] % 200;
+        if(diffs[tmp] == -1) {
+            diffs[tmp] = i;
         } else {
-            ++order[tmp];
+            if (diffs[tmp] < i) {
+                ++res;
+                diffs[tmp] = -1;
+            } else {
+                diffs[tmp] = i;
+            }
         }
-    }
-    for(auto it = order.begin() ; it != order.end() ; ++it) {
-        res += it->second / 2;
+
     }
     return res;
 }
