@@ -32,7 +32,6 @@ std::vector<int> subarray(std::vector<int>& vals, int target) {
     for(int i = 0; i < n; ++i){
         temp += vals[i];
         if(sums_order.count(temp - target)){
-            std::cout << sums_order[temp - target] + 1 << " " << i << std::endl;
             return std::vector<int> (vals.begin() + sums_order[temp - target] + 1, vals.begin() + i + 1);
         }
         if(!sums_order.count(temp)){

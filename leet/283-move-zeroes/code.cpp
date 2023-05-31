@@ -64,24 +64,16 @@ std::vector<int> move_zeroes_with_mem(std::vector<int>& values) {
 
 // with O(1) additional memmory and O(n) complexity, this soltion faster then other one with 
 // additional memmory
-void move_zeroes(std::vector<int>& values) {
-    int n = values.size();
-    int i_start = 0, i_end = 1 ; 
-    while (i_start < n && i_end < n ) {
-        if (values[i_start] == 0 && values[i_end] != 0) {
-            std::swap(values[i_start], values[i_end]);
-            ++i_start;
-            ++i_end;
-        } else if(values[i_start] == 0 && values[i_end] == 0) {
-            ++i_end;
-        } else if(values[i_start] != 0 && values[i_end] == 0) {
-            ++i_start;
-        } else if (values[i_start] != 0 && values[i_end] != 0) {
-            ++i_start;
-            ++i_end;
-        } else {
-            break;
+void move_zeroes(std::vector<int>& nums) {
+    int n = nums.size();
+    int j = 0;
+    for(int i = 0; i < n ; ++i) {
+        if(nums[i] != 0) {
+            nums[j++] = nums[i];
         }
+    }
+    for(; j < n ; ++j) {
+        nums[j] = 0;
     }
 }
 
